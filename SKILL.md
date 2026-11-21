@@ -6,6 +6,11 @@ name: ks-matrix
 description: "快手账号矩阵数据源（只读）：关键词搜视频、博主作品与粉丝数据、视频评论，输出 JSON，不登录不发布。触发词：快手、Kuaishou、kwai、快手搜索、快手评论、快手博主。用户要查快手视频、评论、爆款选题、竞品监控、KOL 筛选或评论舆情时使用；抖音、小红书、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.1.3
+display_name: "快手账号矩阵｜多账号巡检·批量数据·横向对比·统一看板"
+display_name_en: "Kuaishou Matrix"
+description_zh: "快手账号矩阵数据源（只读，无需登录你的快手账号，不发布不点赞不评论，无风控封号问题）：对矩阵内多个账号逐个取公开数据，全部以结构化 JSON 输出，可汇总成统一看板或导入 Excel/BI 做横向对比。\n\n三类能力：①关键词搜索视频，支持综合/最新/最多点赞排序、近 1 日/7 日/1 月时间范围与时长筛选；②博主作品抓取，支持最新/最热排序，加 --limit 0 只取粉丝数、获赞数、关注数等主页数据；③视频评论抓取，支持视频链接、短链与 3x 视频 id。\n\n矩阵口径：逐账号取同一字段，按账号分组对比粉丝、获赞、发布量与互动率，定位涨幅异常的账号。链接口径：主页链接或纯数字 user_id 给作品命令，视频链接/短链/3x id 给评论命令。\n\n规模：按量 Token 单次最多 10000 条；包月搜索最多 30 条、作品最多 50 条、评论最多 60 条，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零依赖，国内直连。"
+description_en: "Read-only Kuaishou account-matrix data source, no login, no ban risk. Run one command per account to get public Kuaishou data as structured JSON, then merge all accounts into one dashboard or Excel/BI sheet for direct comparison.\n\nCapabilities: 1) Keyword search over videos, sorted by relevance, newest or most likes, with 1-day/7-day/month windows and duration filters. 2) Creator post listing with newest/hottest sorting, plus profile-only mode (--limit 0) for follower, like and follow counts. 3) Comment scraping for videos, accepting video links, short links and 3x video ids.\n\nMatrix workflow: pull the same fields for every account, group by account and compare followers, likes, posting volume and engagement to spot outliers.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly plans cap searches at 30, posts at 50, comments at 60, then PLAN_LIMIT. Needs only Node.js 16.14+ and GUAIKEI_API_TOKEN; zero deps; direct from mainland China."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "📷"
